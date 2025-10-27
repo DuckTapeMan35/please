@@ -1,0 +1,38 @@
+@import "/home/duck/.cache/wal/colors-waybar.css";
+
+@define-color main-fg         @color15;
+@define-color main-bg         @color0;
+@define-color main-br         @color15;
+
+@define-color active-bg       @color11;
+@define-color active-fg       @color15;
+
+@define-color hover-bg        @color11;
+@define-color hover-fg        @color15;
+
+/* Module Colors */
+
+@define-color module-fg       @color15;
+@define-color workspaces      @color0;
+
+@define-color temperature     @color1;
+@define-color memory          @color2;
+@define-color cpu             @color3;
+@define-color distro-fg       @color11;
+@define-color distro-bg       @color0;
+@define-color time            @color3;
+@define-color date            @color2;
+@define-color tray            @color1;
+
+@define-color pulseaudio      @color2;
+@define-color backlight       @color0;
+@define-color battery         @color0;
+@define-color power           @color4;
+@define-color notif           @color3;
+@define-color color-picker    @color1;
+
+/* State Colors */
+
+@define-color warning         #FEE135;
+@define-color critical        #B80F0A;
+@define-color charging        #98FB98;

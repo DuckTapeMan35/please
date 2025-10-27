@@ -1,0 +1,366 @@
+@import "theme.css";
+
+/* ───────────────────────────────────────────────────────────────┤ global ├───
+*/
+* {
+  min-height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ───────────────────────────────────────────────────────────┤ background ├───
+*/
+window#waybar > box {
+  background: @color0;
+}
+
+/* ─────────────────────────────────────────────────────────────┤ tooltips ├───
+*/
+tooltip {
+  background: @main-bg;
+  border: 1.5px solid @color1;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: @main-fg;
+  margin: -1.5px 3px;
+}
+
+/* ──────────────────────────────────────────────────────────────┤ general ├───
+*/
+#custom-theme,
+#workspaces,
+#window,
+#custom-temperature,
+#memory,
+#cpu,
+#idle_inhibitor,
+#clock,
+#custom-wifi,
+#bluetooth,
+#custom-update,
+#mpris,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power {
+  opacity: 1;
+  color: @module-fg;
+  padding: 0 4px;
+}
+
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4,
+#custom-left5,
+#custom-left6,
+#custom-left7,
+#custom-left8 {
+  margin-bottom: 0;
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4,
+#custom-right5 {
+  margin-bottom: 0;
+  padding-right: 3px;
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ───────────────────────────────────────────────────────────┤ workspaces ├───
+*/
+#custom-left1 {
+  color: @workspaces;
+  background: @main-bg;
+  margin-bottom: 0;
+  padding-left: 2px;
+}
+
+#workspaces {
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button {
+    color: @color15;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.active {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: @color3;
+    color: @color15;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: @color11;
+    color: @color1;
+}
+
+#custom-right1 {
+  color: @workspaces;
+  background: @main-bg;
+  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+}
+
+/* ──────────────────────────────────────────────────────────┤ temperature ├───
+*/
+#custom-paddc {
+  padding-right: 22px;
+}
+
+#custom-left2 {
+  color: @temperature;
+  background: @main-bg;
+  padding-left: 3px;
+}
+
+#custom-temperature {
+  background: @temperature;
+  padding: 0 0 0 1px;
+}
+
+/* ───────────────────────────────────────────────────────────────┤ memory ├───
+*/
+#custom-left3 {
+  color: @memory;
+  background: @temperature;
+  padding-left: 3px;
+}
+
+#memory {
+  background: @memory;
+  padding: 0 0 0 1px;
+}
+
+#memory.warning {
+  color: @warning;
+}
+
+#memory.critical {
+  color: @critical;
+}
+
+/* ──────────────────────────────────────────────────────────────────┤ cpu ├───
+*/
+#custom-left4 {
+  color: @cpu;
+  background: @memory;
+  padding-left: 3px;
+}
+
+#cpu {
+  background: @cpu;
+}
+
+#custom-leftin1 {
+  color: @cpu;
+  margin-bottom: -1px;
+}
+
+/* ──────────────────────────────────────────────────────────┤ distro icon ├───
+*/
+#custom-left5 {
+  color: @distro-bg;
+  background: @main-bg;
+  text-shadow: none;
+  margin-bottom: -2px;
+  padding-left: 3px;
+}
+
+#custom-distro {
+  color: @distro-fg;
+  background: @distro-bg;
+  margin: 0 -1px -2px 0;
+  padding: 0 0 0 3px;
+  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}
+
+#custom-right2 {
+  color: @distro-bg;
+  background: @main-bg;
+  text-shadow: none;
+  margin-bottom: -2px;
+}
+
+/* ─────────────────────────────────────────────────────────────────┤ time ├───
+*/
+#custom-rightin1 {
+  color: @time;
+  margin-bottom: -1px;
+}
+
+#clock.time {
+  background: @time;
+  margin-left: -2px;
+  padding: 0 3px 0 0;
+}
+
+#custom-right3 {
+  color: @time;
+  background: @date;
+}
+
+/* ─────────────────────────────────────────────────────────────────┤ date ├───
+*/
+#clock.date {
+  background: @date;
+}
+
+#custom-right4 {
+  color: @date;
+  background: @tray;
+}
+
+/* ────────────────────────────────────────────────────────────┤ bluetooth ├───
+*/
+#bluetooth {
+  background: @tray;
+  padding-right: 5px;
+}
+
+/* ────────────────────────────────────────────────────────┤ system update ├───
+*/
+#custom-update {
+  padding-right: 8px;
+  background: @tray;
+}
+
+#custom-right5 {
+  color: @tray;
+  background: @main-bg;
+}
+/* ─────────────────────────────────────────────────────────┤ color picker ├───
+*/
+
+#custom-left6 {
+  color: @color-picker;
+  background: @main-bg;
+  padding-left: 3px;
+}
+
+
+#custom-waypick {
+  color:@main-fg;
+  background: @color-picker;
+}
+
+/* ────────────────────────────────────────────────────────┤ output device ├───
+*/
+
+#pulseaudio {
+  background: @pulseaudio;
+}
+
+#custom-left7 {
+  color: @pulseaudio;
+  background: @color-picker;
+  padding-left: 2px;
+}
+
+/* ─────────────────────────────────────────────────────┤ notification center ├───
+*/
+
+#custom-left8 {
+  color: @notif;
+  background: @pulseaudio;
+  padding-left: 2px;
+}
+
+#custom-notif {
+  color: @main-fg;
+  background: @notif;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────┤ power button ├───
+*/
+
+#custom-left9 {
+  color: @power;
+  background: @notif;
+  padding-left: 2px;
+}
+
+#custom-power {
+  color: @main-fg;
+  background: @power;
+}
+
+/* ───────────────────────────────────────────────────────────┤ font sizes ├───
+*/
+/*
+  NOTE: Be careful when changing font sizes, as they can affect alignment.
+
+  Try adjusting whole numbers first, then refine with decimals.
+
+  If you increase or decrease a value, make the same change to all properties
+  in this section to keep the layout consistent.
+*/
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+tooltip label,
+#window label,
+#mpris {
+  font-weight: normal;
+}
+
+/* ──────────────────────────────────────────────────┤ left & right arrows ├───
+*/
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4,
+#custom-left5,
+#custom-left6,
+#custom-left7,
+#custom-left8,
+#custom-left9,
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4,
+#custom-right5 {
+  font-size: 17.62px;
+}
+
+/* ─────────────────────────────────────────────────┤ left & right inverse ├───
+*/
+#custom-leftin1,
+#custom-leftin2,
+#custom-rightin1 {
+  font-size: 18.6px;
+}
+
+/* ──────────────────────────────────────────────────────────┤ distro icon ├───
+*/
+#custom-distro {
+  font-size: 17.52px;
+}
+
+#custom-left5,
+#custom-right2 {
+  font-size: 18.82px;
+}
+
+/*
+  Adjust these properties as well to keep the design consistent.
+*/
+
+#workspaces button {
+  border-radius: 25px;
+}
